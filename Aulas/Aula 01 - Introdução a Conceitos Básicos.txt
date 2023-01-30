@@ -1,0 +1,4 @@
+- Shell é uma interface personalizavel do sistema.
+	* Podem ser interfaces de texto ou gráficas, mas são iterativas para o sistema operacional.
+
+- São personalizaveis e distintos do kernel

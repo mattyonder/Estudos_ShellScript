@@ -1,0 +1,53 @@
+Alias é tipo um "apelido" dado para um comando:
+
+alias mo='more'
+
+alias lshome= 'cd/home; ls' - Aqui ele evoca 2 comandos em seguida ( Por causa do ponto e virgula )
+
+alias lsl='ls-l' -> Aqui estou modificando o comportamento padrão do comando
+
+Obs: Deve se tomar cuidado para não colocar o nome do alias como o nome de uma variavel que já existe
+
+Para listar os alias criados é só digitar alias sem parâmetros.
+
+Por padrão, os aliases são locais ao shell e não são repassados a outros programas.
+
+Para remover algum alias -> unalias nome_alias
+
+--------------------------------------------------------------
+
+cat /etc/passwd -> Caminho que guarda informações sobre todas as contas de usuário encontradas no sistema
+
+alias mo'more' -> Lista por vez os conteudos
+
+cat /etc/passwd | mo -> Lista por vez as informações desse caminho
+
+unalias mo -> Remove mo
+
+--------------------------------------------------------------
+
+ls -l -> É um ls com mais detalhes
+
+alias lsl='ls -l'
+
+lsl -> Chama esse ls com mais detalhes
+
+unalias lsl -> Remove esse alias
+
+--------------------------------------------------------------
+
+Dá para criar funções também, diferente do alias, a função é tipo um pequeno programa e pode ser reaproveitada dentro de scripts do bash.
+Ex:
+
+palavra(){
+cd /home/mateus-zorinos
+echo'Linha acrescentada' >> teste_func -> Aqui ele está anexando o texto do echo dentro teste_func
+}
+
+typeset -f | less -> Mostra as funções criadas dentro do bash
+
+palavra -> Simplesmente executo a função
+
+cat teste_func -> Leio o que tem dentro do arquivo teste_func
+
+vi .bashrc -> Exibe o que tem dentro do arquivo .bashrc

@@ -1,0 +1,41 @@
+Variaveis de ambientes contém valores e dados usados pelos programas e por outros shells. Existem 2 tipos:
+- Globais
+- Locais
+
+VARIAVEIS GLOBAIS:
+
+PATH - Lista de diretórios de programas executáveis
+USERNAME - Nome do usuário logado
+TERM - Tipo de terminal ou janela de terminal em uso
+HOME - Diretório home do usuário atual
+UID - UID do usuário atual
+RANDOM - Gera um número aleatório
+LANG - Idioma, especificado como locale
+
+Os comandos env e printenv mostram as variaveis de ambiente no terminal.
+Para criar uma variável global, crie uma local depois exporte ela com o comando export.
+
+Variaveis do linux são por padrão criadas com letras maiusculas. Caso deseje criar uma variavel é aconselhavel que ela seja criada com letras minusculas.
+
+env | less mostra todas as variaveis de cada vez
+
+---------------------------------------------------------------------------------
+
+Variáveis do Shell são "variáveis locais" pois são específicas daquele shell atual.
+
+Para criar variáveis novas digita:
+(nome da variavel) = (valor dela)
+Ex:
+
+teste=valor
+
+E para verificar seu valor:
+echo $teste (  Se não usar o $ o echo vai mostrar o nome da variavel apenas )
+
+Para tornar a variavel global:
+export teste
+
+E para remover:
+unset teste
+
+O comando bash cria outra sessão dentro do shell, e para verificar os processos do shell digite o comando ps

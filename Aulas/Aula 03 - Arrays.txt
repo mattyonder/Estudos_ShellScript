@@ -1,0 +1,20 @@
+Variáveis do ambientes podem ser usadas com arrays, variáveis que podem armazenar múltiplos valores.
+
+testearray=(laranja morango acerola abacaxi)
+
+Para acessar seu conteúdo:
+echo ${testearray[índice do item, que começa apartir do 0]}
+
+echo ${testearray[2]}
+
+echo ${testearray[*]} -> Aqui mostra todos os itens
+
+testearray[2]=banana -> Aqui eu estou alterando um item indivíual do array
+
+unset testearray[2] -> Remove itens indivídualmente
+
+unset testearray[*] -> Remove o array como um todo
+
+meuarray=(a b c)
+meuarray[3]=d -> Adiciona itens dentro do array
+
